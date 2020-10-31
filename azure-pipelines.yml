@@ -3,15 +3,20 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-extends:
-  template: azure-pipelines-template.yml
-
-jobs:
-- job: publish
+stages:
+- stage: build
   pool:
-    vmImage: 'ubunt-latest'
-  steps:
+    vmImage: 'ubuntu-latest'
+    extends:
+      template: azure-pipelines-template.yml
+
+- stage: publish
+  pool:
+    vmImage: 'ubuntu-latest'
+    steps:
     - task: DotNetCoreCLI@2
       inputs:
         command: 'publish'
         publishWebProjects: false
+        arguments: '-c Relase'
+        modifyOutputPath: false
