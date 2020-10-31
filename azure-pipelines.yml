@@ -5,3 +5,13 @@
 
 extends:
   template: azure-pipelines-template.yml
+
+jobs:
+- job: publish
+  pool:
+    vmImage: 'ubunt-latest'
+  steps:
+    - task: DotNetCoreCLI@2
+      inputs:
+        command: 'publish'
+        publishWebProjects: false
