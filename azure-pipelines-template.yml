@@ -8,6 +8,8 @@ trigger:
 
 jobs:
 - job: Build
+  pool:
+    vmImage: 'ubuntu-latest'
   steps:
     - task: DotNetCoreCLI@2
       displayName: Restore
