@@ -4,4 +4,4 @@
 # https://aka.ms/yaml
 
 extends:
-  template: azure-pipelines.yml
+  template: azure-pipelines-template.yml
