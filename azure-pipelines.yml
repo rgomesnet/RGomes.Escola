@@ -21,4 +21,4 @@ steps:
     script: |
       # Write your PowerShell commands here.
       echo $(Build.Repository.Name)
-      ls -1
+      echo $(Build.Repository.Name) | awk -F'/' '{print $2}'
