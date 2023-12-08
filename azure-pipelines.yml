@@ -20,6 +20,6 @@ steps:
     targetType: 'inline'
     script: |
       # Write your PowerShell commands here.
-      dir
+      # dir
       echo $(echo $app | awk -F'/' '{print $2}')
-      echo $app | awk -F'/' '{print $2}'
+      # echo $app | awk -F'/' '{print $2}'
