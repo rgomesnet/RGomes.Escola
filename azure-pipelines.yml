@@ -13,6 +13,7 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  workdir=
 
 steps:
 - task: PowerShell@2
@@ -21,5 +22,4 @@ steps:
     script: |
       # Write your PowerShell commands here.
       echo $(Build.Repository.Name)
-      my_dir=$(echo $(Build.Repository.Name) | awk -F'/' '{print $2}')
-      echo $my_dir
+      cd $(echo $(Build.Repository.Name) | awk -F'/' '{print $2}')
