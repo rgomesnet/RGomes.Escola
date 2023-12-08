@@ -23,3 +23,4 @@ steps:
       echo $(Build.Repository.Name)
       echo $(Build.Repository.ID)
       echo $(Build.Repository.LocalPath)
+      echo $(Build.DefinitionName)
