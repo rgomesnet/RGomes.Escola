@@ -20,5 +20,4 @@ steps:
     targetType: 'inline'
     script: |
       # Write your PowerShell commands here.
-      echo $(variables{Build.Repository.Name])
-      echo $[variables['Build.Repository.Name']]
+      echo $(Build.Repository.Name)
