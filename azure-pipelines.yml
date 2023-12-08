@@ -21,6 +21,4 @@ steps:
     script: |
       # Write your PowerShell commands here.
       echo $(Build.Repository.Name)
-      echo $(Build.Repository.ID)
-      echo $(Build.Repository.LocalPath)
-      echo $(Build.DefinitionName)
+      cd $(Build.Repository.ID)
