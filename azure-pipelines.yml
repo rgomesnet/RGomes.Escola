@@ -13,7 +13,6 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  workdir=
 
 steps:
 - task: PowerShell@2
