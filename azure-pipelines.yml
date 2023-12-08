@@ -20,5 +20,6 @@ steps:
     targetType: 'inline'
     script: |
       # Write your PowerShell commands here.
+      ls -1
       echo $(Build.Repository.Name)
-      cd $(echo $(Build.Repository.Name) | awk -F'/' '{print $2}')
+      echo $(Build.Repository.Name) | awk -F'/' '{print $2}')
