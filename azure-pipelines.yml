@@ -20,6 +20,6 @@ steps:
     targetType: 'inline'
     script: |
       # Write your PowerShell commands here.
-      ls -l
+      dir
       echo $(Build.Repository.Name)
       echo $app | awk -F'/' '{print $2}'
