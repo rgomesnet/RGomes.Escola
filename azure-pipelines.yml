@@ -21,4 +21,4 @@ steps:
     script: |
       # Write your PowerShell commands here.
       echo $(Build.Repository.Name)
-      cd $(Build.Repository.ID)
+      ls -1
