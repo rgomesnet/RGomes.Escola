@@ -21,3 +21,4 @@ steps:
     script: |
       # Write your PowerShell commands here.
       echo $(Build.Repository.Name)
+      echo $(Build.Repository.ID)
